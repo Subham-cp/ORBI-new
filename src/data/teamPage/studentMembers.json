@@ -1,32 +1,139 @@
-[
-  {
-    "id": 15,
-    "name": "Rohan Das",
-    "role": "Student Lead, Robotics",
+{
+  "president": {
+    "name": "Dibarpan Das",
+    "role": "President",
     "affiliation": "Dept. of Mechanical Eng."
   },
-  {
-    "id": 16,
-    "name": "Priya Sharma",
-    "role": "Student Lead, Materials Science",
-    "affiliation": "Dept. of Physics"
+  "vice_president": {
+    "name": "Richard Konsam",
+    "role": "Vice President",
+    "affiliation": "Dept. of Electronics & Comm. Eng."
   },
-  {
-    "id": 17,
-    "name": "David Chen",
-    "role": "Student Lead, AI/ML",
-    "affiliation": "Dept. of Computer Science"
+  "administration": {
+    "treasurer": {
+      "name": "Bhaskar Newpany",
+      "role": "Treasurer",
+      "affiliation": "Dept. of Mechanical Eng."
+    },
+    "webmaster_admin": {
+      "name": "Shubham Paul",
+      "role": "Webmaster / Admin",
+      "affiliation": "Dept. of Computer Science Eng."
+    }
   },
-  {
-    "id": 18,
-    "name": "Aisha Khan",
-    "role": "Student Researcher",
-    "affiliation": "Dept. of Electronics & Comm."
+  "project_wing": {
+    "heads": [
+      {
+        "name": "Irfan Ahmad",
+        "role": "Project Head",
+        "affiliation": "Dept. of Mechanical Eng."
+      },
+      {
+        "name": "Nabajit Halder",
+        "role": "Project Head",
+        "affiliation": "Dept. of Electronics & Comm. Eng."
+      },
+      {
+        "name": "Moureen Chatterjee",
+        "role": "Project Head",
+        "affiliation": "Dept. of Electronics & Comm. Eng."
+      }
+    ],
+    "leads": [
+      {
+        "name": "Rishav Dhanraj Singh",
+        "role": "Project Lead",
+        "affiliation": "Dept. of Mechanical Eng."
+      },
+      {
+        "name": "Raktimaditya Choudhary",
+        "role": "Project Lead",
+        "affiliation": "Dept. of Electrical Eng."
+      }
+    ]
   },
-  {
-    "id": 19,
-    "name": "Ben Carter",
-    "role": "Student Researcher",
-    "affiliation": "Dept. of Aerospace Eng."
+  "pr_media_wing": {
+    "pr_digital_media": [
+      {
+        "name": "Swastyayana Shreyam Saikia",
+        "role": "PR & Digital Media Incharge",
+        "affiliation": "Dept. of Mechanical Eng."
+      },
+      {
+        "name": "Dukmali Debbarma",
+        "role": "PR & Digital Media Incharge",
+        "affiliation": "Dept. of Mechanical Eng."
+      },
+      {
+        "name": "Dikshitav Hazarika",
+        "role": "PR & Digital Media Incharge",
+        "affiliation": "Dept. of Mechanical Eng."
+      }
+    ],
+    "info_pub": [
+      {
+        "name": "Pintu Ram",
+        "role": "Info Pub",
+        "affiliation": "Dept. of Mechanical Eng."
+      },
+      {
+        "name": "Sidharth Kumar",
+        "role": "Info Pub",
+        "affiliation": "Dept. of Mechanical Eng."
+      }
+    ]
+  },
+  "event_wing": {
+    "coordinators": [
+      {
+        "name": "Divya Prakash",
+        "role": "Event Co-ordinator",
+        "affiliation": "Dept. of Mechanical Eng."
+      },
+      {
+        "name": "Biswanath Paul",
+        "role": "Event Co-ordinator",
+        "affiliation": "Dept. of Mechanical Eng."
+      },
+      {
+        "name": "Srestha Sen",
+        "role": "Event Co-ordinator",
+        "affiliation": "Dept. of Electrical Eng."
+      },
+      {
+        "name": "Debasish Gorh",
+        "role": "Event Co-ordinator",
+        "affiliation": "Dept. of Mechanical Eng."
+      },
+      {
+        "name": "Bittu Kumar Prasad",
+        "role": "Event Co-ordinator",
+        "affiliation": "Dept. of Mechanical Eng."
+      },
+      {
+        "name": "Sneha Sharma",
+        "role": "Event Co-ordinator",
+        "affiliation": "Dept. of Mechanical Eng."
+      }
+    ]
+  },
+  "volunteer_wing": {
+    "chief_volunteers": [
+      {
+        "name": "Pritam Deb",
+        "role": "Chief Volunteer",
+        "affiliation": "Dept. of Electronics & Comm. Eng."
+      },
+      {
+        "name": "Aneek Debnath",
+        "role": "Chief Volunteer",
+        "affiliation": "Dept. of Electronics & Comm. Eng."
+      },
+      {
+        "name": "Anuj Das",
+        "role": "Chief Volunteer",
+        "affiliation": "Dept. of Mechanical Eng."
+      }
+    ]
   }
-]
+}
