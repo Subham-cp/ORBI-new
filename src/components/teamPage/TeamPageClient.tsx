@@ -2,20 +2,48 @@
 
 import { PageHero } from '@/components/ui/PageHero';
 import { CoreTeam } from '@/components/teamPage/CoreTeam';
-// 1. Uncomment the import
-import { StudentMembers } from '@/components/teamPage/StudentMembers'; 
+import { StudentMembers } from '@/components/teamPage/StudentMembers';
 import { HeroData, TeamMember } from '@/types'
 
-// Define the props interface to include studentMembers
+// 1. Define the shape of a single student
+interface Student {
+  id?: number;
+  name: string;
+  role: string;
+  affiliation: string;
+}
+
+// 2. Define the shape of your specific JSON hierarchy
+export interface StudentData {
+  president: Student;
+  vice_president: Student;
+  administration: {
+    treasurer: Student;
+    webmaster_admin: Student;
+  };
+  project_wing: {
+    heads: Student[];
+    leads: Student[];
+  };
+  pr_media_wing: {
+    pr_digital_media: Student[];
+    info_pub: Student[];
+  };
+  event_wing: {
+    coordinators: Student[];
+  };
+  volunteer_wing: {
+    chief_volunteers: Student[];
+  };
+}
+
 interface TeamPageClientProps {
   hero: HeroData;
   coreMembers: TeamMember[];
-  studentMembers: any; // Using 'any' here because your JSON is now a complex hierarchy, not a simple array
+  studentMembers: StudentData; // No more 'any' error!
 }
 
-// 2. Add studentMembers to the destructured props
 export function TeamPageClient({ hero, coreMembers, studentMembers }: TeamPageClientProps) {
-  
   return (
     <div>
       <PageHero 
@@ -25,9 +53,8 @@ export function TeamPageClient({ hero, coreMembers, studentMembers }: TeamPageCl
       />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <CoreTeam members={coreMembers} />
-        
-        {/* 3. Uncomment the component usage */}
-        <StudentMembers members={studentMembers} />
+        {/* Pass the data to the new component */}
+        <StudentMembers data={studentMembers} />
       </div>
     </div>
   );
