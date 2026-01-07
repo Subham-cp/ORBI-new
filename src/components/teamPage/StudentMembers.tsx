@@ -156,10 +156,16 @@ export function StudentMembers({ data }: StudentMembersProps) {
           </div>
         </div>
 
-        {/* 5. Event Wing */}
-        <SectionTitle title="Event Management Wing" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-          {data.event_wing.coordinators.map((m, i) => <MemberCard key={i} {...m} />)}
+       {/* 5. Event Wing */}
+        <div className="mt-12"> {/* Added wrapper for spacing */}
+          <SectionTitle title="Event Management Wing" />
+          
+          {/* Optional: Added subtitle for consistency */}
+          <SubSectionTitle title="Event Co-ordinators" /> 
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+            {data.event_wing.coordinators.map((m, i) => <MemberCard key={i} {...m} />)}
+          </div>
         </div>
 
         {/* 6. Volunteers */}
