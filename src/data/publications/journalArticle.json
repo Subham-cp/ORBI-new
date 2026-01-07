@@ -1,0 +1,42 @@
+[
+  {
+    "id": "pub1",
+    "title": "To be updated soon.",
+    "authors": ["", ""],
+    "journalOrConference": "Journal of Spacecraft and Rockets, Vol. 62(4)",
+    "year": 2025,
+    "abstract": "This paper presents a novel electric propulsion system for CubeSats, utilizing a hall-effect thruster that offers unprecedented efficiency and thrust-to-power ratio for small satellite platforms.",
+    "link": "#",
+    "image": "/images/engine.avif"
+  },
+  {
+    "id": "pub2",
+    "title": "To be updated soon.",
+    "authors": ["", ""],
+    "journalOrConference": "Journal of Spacecraft and Rockets, Vol. 62(4)",
+    "year": 2025,
+    "abstract": "This paper presents a novel electric propulsion system for CubeSats, utilizing a hall-effect thruster that offers unprecedented efficiency and thrust-to-power ratio for small satellite platforms.",
+    "link": "#",
+    "image": "/images/engine.avif"
+  },
+  {
+    "id": "pub3",
+    "title": "To be updated soon.",
+    "authors": ["", ""],
+    "journalOrConference": "Journal of Spacecraft and Rockets, Vol. 62(4)",
+    "year": 2025,
+    "abstract": "This paper presents a novel electric propulsion system for CubeSats, utilizing a hall-effect thruster that offers unprecedented efficiency and thrust-to-power ratio for small satellite platforms.",
+    "link": "#",
+    "image": "/images/engine.avif"
+  },
+  {
+    "id": "pub4",
+    "title": "To be updated soon.",
+    "authors": ["", ""],
+    "journalOrConference": "Journal of Spacecraft and Rockets, Vol. 62(4)",
+    "year": 2025,
+    "abstract": "This paper presents a novel electric propulsion system for CubeSats, utilizing a hall-effect thruster that offers unprecedented efficiency and thrust-to-power ratio for small satellite platforms.",
+    "link": "#",
+    "image": "/images/engine.avif"
+  }
+]

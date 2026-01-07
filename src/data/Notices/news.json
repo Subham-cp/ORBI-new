@@ -1,0 +1,34 @@
+[
+  {
+    "id": "news-1",
+    "title": "To be updated soon.",
+    "date": "2025-08-20",
+    "link": "#",
+    "image": "/images/rocket.jpg",
+    "excerpt": "........"
+  },
+  {
+    "id": "news-2",
+    "title": "To be updated soon.",
+    "date": "2025-08-20",
+    "link": "#",
+    "image": "/images/rocket.jpg",
+    "excerpt": "........"
+  },
+  {
+    "id": "news-3",
+    "title": "To be updated soon.",
+    "date": "2025-08-20",
+    "link": "#",
+    "image": "/images/rocket.jpg",
+    "excerpt": "........"
+  },
+  {
+    "id": "news-4",
+    "title": "To be updated soon.",
+    "date": "2025-08-20",
+    "link": "#",
+    "image": "/images/rocket.jpg",
+    "excerpt": "........"
+  }
+]
