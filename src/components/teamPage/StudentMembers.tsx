@@ -22,11 +22,11 @@ const SubSectionTitle = ({ title }: { title: string }) => (
 
 // New 3D ID Card Component
 const MemberCard = ({ name, role, affiliation }: { name: string; role: string; affiliation: string }) => (
-  // Container for 3D perspective
+  /* Container for 3D perspective */
   <div className="group [perspective:1000px] h-[260px] w-full max-w-sm mx-auto">
-    // The card itself that tilts
+    {/* The card itself that tilts */}
     <div className="relative w-full h-full duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(8deg)_rotateX(4deg)] transition-all ease-out">
-      // Front face of the card
+      {/* Front face of the card */}
       <div className="absolute inset-0 w-full h-full bg-slate-900/90 backdrop-blur-xl p-5 rounded-2xl border border-white/10 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] flex flex-col items-center text-center overflow-hidden [backface-visibility:hidden]">
         
         {/* Lanyard Slot visualization */}
