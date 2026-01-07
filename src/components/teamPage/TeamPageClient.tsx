@@ -5,12 +5,13 @@ import { CoreTeam } from '@/components/teamPage/CoreTeam';
 import { StudentMembers } from '@/components/teamPage/StudentMembers';
 import { HeroData, TeamMember } from '@/types'
 
-// 1. Define the shape of a single student
+// 1. Updated Interface: Added 'image' as optional
 interface Student {
   id?: number;
   name: string;
   role: string;
   affiliation: string;
+  image?: string; // <--- ADDED THIS
 }
 
 // 2. Define the shape of your specific JSON hierarchy
@@ -40,7 +41,7 @@ export interface StudentData {
 interface TeamPageClientProps {
   hero: HeroData;
   coreMembers: TeamMember[];
-  studentMembers: StudentData; // No more 'any' error!
+  studentMembers: StudentData;
 }
 
 export function TeamPageClient({ hero, coreMembers, studentMembers }: TeamPageClientProps) {
@@ -53,7 +54,6 @@ export function TeamPageClient({ hero, coreMembers, studentMembers }: TeamPageCl
       />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <CoreTeam members={coreMembers} />
-        {/* Pass the data to the new component */}
         <StudentMembers data={studentMembers} />
       </div>
     </div>

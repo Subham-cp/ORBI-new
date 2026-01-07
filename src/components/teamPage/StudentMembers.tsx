@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image'; // Import Next.js Image component
 import { StudentData } from './TeamPageClient';
 
 interface StudentMembersProps {
@@ -20,8 +21,8 @@ const SubSectionTitle = ({ title }: { title: string }) => (
   </h4>
 );
 
-// New 3D ID Card Component
-const MemberCard = ({ name, role, affiliation }: { name: string; role: string; affiliation: string }) => (
+// Updated MemberCard to accept and display 'image'
+const MemberCard = ({ name, role, affiliation, image }: { name: string; role: string; affiliation: string; image?: string }) => (
   /* Container for 3D perspective */
   <div className="group [perspective:1000px] h-[260px] w-full max-w-sm mx-auto">
     {/* The card itself that tilts */}
@@ -32,12 +33,23 @@ const MemberCard = ({ name, role, affiliation }: { name: string; role: string; a
         {/* Lanyard Slot visualization */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-3 bg-slate-800/80 rounded-b-xl border-b border-x border-white/10 shadow-sm"></div>
         
-        {/* Photo Placeholder */}
+        {/* Photo Container */}
         <div className="relative w-20 h-20 rounded-full mb-3 mt-4 p-0.5 bg-gradient-to-br from-blue-500/50 to-purple-500/50 shadow-lg">
-           <div className="w-full h-full bg-slate-800 rounded-full flex items-center justify-center overflow-hidden">
-             <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-slate-600" viewBox="0 0 20 20" fill="currentColor">
-               <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-             </svg>
+           <div className="w-full h-full bg-slate-800 rounded-full flex items-center justify-center overflow-hidden relative">
+             {image ? (
+               /* If image exists, show it */
+               <Image 
+                 src={image} 
+                 alt={name} 
+                 fill 
+                 className="object-cover"
+               />
+             ) : (
+               /* Default Placeholder Icon */
+               <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-slate-600" viewBox="0 0 20 20" fill="currentColor">
+                 <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+               </svg>
+             )}
            </div>
            {/* Subtle glow behind photo */}
            <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-md -z-10"></div>

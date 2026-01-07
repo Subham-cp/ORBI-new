@@ -2,23 +2,27 @@
   "president": {
     "name": "Dibarpan Das",
     "role": "President",
-    "affiliation": "Dept. of Mechanical Eng."
+    "affiliation": "Dept. of Mechanical Eng.",
+    "image": "/images/teamMembers/students/dibarpan_das.jpg"
   },
   "vice_president": {
     "name": "Richard Konsam",
     "role": "Vice President",
-    "affiliation": "Dept. of Electronics & Comm. Eng."
+    "affiliation": "Dept. of Electronics & Comm. Eng.",
+    "image": "/images/teamMembers/students/richard_konsam.jpg"
   },
   "administration": {
     "treasurer": {
       "name": "Bhaskar Newpany",
       "role": "Treasurer",
-      "affiliation": "Dept. of Mechanical Eng."
+      "affiliation": "Dept. of Mechanical Eng.",
+      "image": "/images/teamMembers/students/bhaskar_newpany.jpg"
     },
     "webmaster_admin": {
       "name": "Shubham Paul",
       "role": "Webmaster / Admin",
-      "affiliation": "Dept. of Computer Science Eng."
+      "affiliation": "Dept. of Computer Science Eng.",
+      "image": "/images/teamMembers/students/shubham_paul.jpg"
     }
   },
   "project_wing": {
@@ -26,29 +30,34 @@
       {
         "name": "Irfan Ahmad",
         "role": "Project Head",
-        "affiliation": "Dept. of Mechanical Eng."
+        "affiliation": "Dept. of Mechanical Eng.",
+        "image": "/images/teamMembers/students/irfan_ahmad.jpg"
       },
       {
         "name": "Nabajit Halder",
         "role": "Project Head",
-        "affiliation": "Dept. of Electronics & Comm. Eng."
+        "affiliation": "Dept. of Electronics & Comm. Eng.",
+        "image": "/images/teamMembers/students/nabajit_halder.jpg"
       },
       {
         "name": "Moureen Chatterjee",
         "role": "Project Head",
-        "affiliation": "Dept. of Electronics & Comm. Eng."
+        "affiliation": "Dept. of Electronics & Comm. Eng.",
+        "image": "/images/teamMembers/students/moureen_chatterjee.jpg"
       }
     ],
     "leads": [
       {
         "name": "Rishav Dhanraj Singh",
         "role": "Project Lead",
-        "affiliation": "Dept. of Mechanical Eng."
+        "affiliation": "Dept. of Mechanical Eng.",
+        "image": "/images/teamMembers/students/rishav_dhanraj_singh.jpg"
       },
       {
         "name": "Raktimaditya Choudhary",
         "role": "Project Lead",
-        "affiliation": "Dept. of Electrical Eng."
+        "affiliation": "Dept. of Electrical Eng.",
+        "image": "/images/teamMembers/students/raktimaditya_choudhary.jpg"
       }
     ]
   },
@@ -57,29 +66,34 @@
       {
         "name": "Swastyayana Shreyam Saikia",
         "role": "PR & Digital Media Incharge",
-        "affiliation": "Dept. of Mechanical Eng."
+        "affiliation": "Dept. of Mechanical Eng.",
+        "image": "/images/teamMembers/students/swastyayana_shreyam_saikia.jpg"
       },
       {
         "name": "Dukmali Debbarma",
         "role": "PR & Digital Media Incharge",
-        "affiliation": "Dept. of Mechanical Eng."
+        "affiliation": "Dept. of Mechanical Eng.",
+        "image": "/images/teamMembers/students/dukmali_debbarma.jpg"
       },
       {
         "name": "Dikshitav Hazarika",
         "role": "PR & Digital Media Incharge",
-        "affiliation": "Dept. of Mechanical Eng."
+        "affiliation": "Dept. of Mechanical Eng.",
+        "image": "/images/teamMembers/students/dikshitav_hazarika.jpg"
       }
     ],
     "info_pub": [
       {
         "name": "Pintu Ram",
         "role": "Info Pub",
-        "affiliation": "Dept. of Mechanical Eng."
+        "affiliation": "Dept. of Mechanical Eng.",
+        "image": "/images/teamMembers/students/pintu_ram.jpg"
       },
       {
         "name": "Sidharth Kumar",
         "role": "Info Pub",
-        "affiliation": "Dept. of Mechanical Eng."
+        "affiliation": "Dept. of Mechanical Eng.",
+        "image": "/images/teamMembers/students/sidharth_kumar.jpg"
       }
     ]
   },
@@ -88,32 +102,38 @@
       {
         "name": "Divya Prakash",
         "role": "Event Co-ordinator",
-        "affiliation": "Dept. of Mechanical Eng."
+        "affiliation": "Dept. of Mechanical Eng.",
+        "image": "/images/teamMembers/students/divya_prakash.jpg"
       },
       {
         "name": "Biswanath Paul",
         "role": "Event Co-ordinator",
-        "affiliation": "Dept. of Mechanical Eng."
+        "affiliation": "Dept. of Mechanical Eng.",
+        "image": "/images/teamMembers/students/biswanath_paul.jpg"
       },
       {
         "name": "Srestha Sen",
         "role": "Event Co-ordinator",
-        "affiliation": "Dept. of Electrical Eng."
+        "affiliation": "Dept. of Electrical Eng.",
+        "image": "/images/teamMembers/students/srestha_sen.jpg"
       },
       {
         "name": "Debasish Gorh",
         "role": "Event Co-ordinator",
-        "affiliation": "Dept. of Mechanical Eng."
+        "affiliation": "Dept. of Mechanical Eng.",
+        "image": "/images/teamMembers/students/debasish_gorh.jpg"
       },
       {
         "name": "Bittu Kumar Prasad",
         "role": "Event Co-ordinator",
-        "affiliation": "Dept. of Mechanical Eng."
+        "affiliation": "Dept. of Mechanical Eng.",
+        "image": "/images/teamMembers/students/bittu_kumar_prasad.jpg"
       },
       {
         "name": "Sneha Sharma",
         "role": "Event Co-ordinator",
-        "affiliation": "Dept. of Mechanical Eng."
+        "affiliation": "Dept. of Mechanical Eng.",
+        "image": "/images/teamMembers/students/sneha_sharma.jpg"
       }
     ]
   },
@@ -122,17 +142,20 @@
       {
         "name": "Pritam Deb",
         "role": "Chief Volunteer",
-        "affiliation": "Dept. of Electronics & Comm. Eng."
+        "affiliation": "Dept. of Electronics & Comm. Eng.",
+        "image": "/images/teamMembers/students/pritam_deb.jpg"
       },
       {
         "name": "Aneek Debnath",
         "role": "Chief Volunteer",
-        "affiliation": "Dept. of Electronics & Comm. Eng."
+        "affiliation": "Dept. of Electronics & Comm. Eng.",
+        "image": "/images/teamMembers/students/aneek_debnath.jpg"
       },
       {
         "name": "Anuj Das",
         "role": "Chief Volunteer",
-        "affiliation": "Dept. of Mechanical Eng."
+        "affiliation": "Dept. of Mechanical Eng.",
+        "image": "/images/teamMembers/students/anuj_das.jpg"
       }
     ]
   }
