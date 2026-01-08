@@ -12,7 +12,8 @@ const iconMap = {
   Linkedin: Linkedin,
   GraduationCap: GraduationCap,
   Twitter: Twitter,
-  Award: Award
+  Award: Award,
+  User: User
 };
 
 export function PresidentSpotlight() {
