@@ -81,14 +81,6 @@
     },
     {
       "id": 11,
-      "name": "Mr. Paulo Barlo",
-      "role": "Mentor",
-      "affiliation": "Sr. Scientist, Boeing, USA",
-      "image": "",
-      "featured": true
-    },
-    {
-      "id": 12,
       "name": "Mr. Jyotishman Borah",
       "role": "Faculty Coordinator",
       "affiliation": "Department of ME, NERIST",
@@ -96,7 +88,7 @@
       "featured": true
     },
     {
-      "id": 13,
+      "id": 12,
       "name": "Mr. Kaustav Moni Borah",
       "role": "Faculty Coordinator",
       "affiliation": "Department of ME, NERIST",
@@ -104,7 +96,7 @@
       "featured": true
     },
     {
-      "id": 14,
+      "id": 13,
       "name": "Dr. Nitish Kumar",
       "role": "Faculty Coordinator",
       "affiliation": "Department of ME, NERIST",
