@@ -1,0 +1,10 @@
+{
+  "name": "Dibarpan Das",
+  "title": "President, ORBI",
+  "image": "/images/teamMembers/students/dibarpan_das.jpg",
+  "message": "Leading the student community towards innovation and technical excellence. Together we build the future of aerospace.",
+  "socials": [
+    { "name": "LinkedIn", "icon": "Linkedin", "link": "#" },
+    { "name": "Twitter", "icon": "Twitter", "link": "#" }
+  ]
+}
