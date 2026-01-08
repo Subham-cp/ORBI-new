@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+// Removed motion import for the inner div to prevent conflict
 import { Section } from '@/components/ui/Section';
 import { Title } from '@/components/ui/Title'; 
 import presidentData from '@/data/homePage/presidentSpotlight.json';
@@ -18,24 +18,21 @@ const iconMap = {
 
 export function PresidentSpotlight() {
   return (
+    // The Section component already handles the fade-in animation
     <Section className="border border-white/10 rounded-2xl bg-slate-950 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.15),rgba(255,255,255,0))]"> 
       <Title icon={User} as="h2" className='mb-6'>
           ORBI President
       </Title>
       
-      <motion.div 
-        className="relative h-full w-full overflow-hidden rounded-2xl py-6"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
+      {/* Changed motion.div to standard div to ensure visibility on mobile */}
+      <div className="relative h-full w-full overflow-hidden rounded-2xl py-6">
         <div className="relative mx-auto h-48 w-48 sm:h-56 sm:w-56">
           <Image
             src={presidentData.image}
             alt={presidentData.name}
             fill
             className="rounded-2xl object-cover ring-2 ring-emerald-400/50"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
 
@@ -63,7 +60,7 @@ export function PresidentSpotlight() {
             );
           })}
         </div>
-      </motion.div>
+      </div>
     </Section>
   );
 }
