@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import pageData from '@/data/publications/hero.json';
+import heroData from '@/data/publications/hero.json';
+import publicationsData from '@/data/publications/journalArticle.json';
 import { PageHero } from '@/components/ui/PageHero';
-import { ComingSoon } from '../ui/ComingSoon';
+import { PublicationCard } from '@/components/ui/PublicationCard';
+import { Section } from '@/components/ui/Section';
 
 export const PublicationsPageClient = () => {
     return (
@@ -14,12 +16,18 @@ export const PublicationsPageClient = () => {
             transition={{ duration: 0.5 }}
         >
             <PageHero
-                title={pageData.hero.title}
-                subtitle={pageData.hero.subtitle}
-                backgroundImage={pageData.hero.backgroundImage}
+                title={heroData.hero.title}
+                subtitle={heroData.hero.subtitle}
+                backgroundImage={heroData.hero.backgroundImage}
             />
 
-            <ComingSoon />
+            <Section className="py-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {publicationsData.map((pub) => (
+                        <PublicationCard key={pub.id} publication={pub} />
+                    ))}
+                </div>
+            </Section>
             
         </motion.div>
     );

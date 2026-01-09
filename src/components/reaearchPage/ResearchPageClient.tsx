@@ -3,7 +3,8 @@
 import { motion } from 'framer-motion';
 import { PageHero } from '@/components/ui/PageHero';
 import pageData from '@/data/researchProjects/projects.json';
-import { ComingSoon } from '../ui/ComingSoon';
+import { ProjectCard } from '@/components/ui/ProjectCard';
+import { Section } from '@/components/ui/Section';
 
 export const ResearchPageClient = () => {
     return (
@@ -19,9 +20,13 @@ export const ResearchPageClient = () => {
                 backgroundImage={pageData.hero.backgroundImage}
             />
             
-            <ComingSoon />
-            
-            
+            <Section className="py-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {pageData.projects.map((project) => (
+                        <ProjectCard key={project.id} project={project} />
+                    ))}
+                </div>
+            </Section>
         </motion.div>
     );
 };

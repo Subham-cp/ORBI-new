@@ -2,9 +2,10 @@
 
 import { motion } from 'framer-motion';
 import { PageHero } from '@/components/ui/PageHero';
-import pageData from '@/data/newsAndEventsPage/hero.json';
-import { ComingSoon } from '../ui/ComingSoon';
-
+import heroData from '@/data/newsAndEventsPage/hero.json';
+import newsData from '@/data/Notices/news.json';
+import { NewsCard } from '@/components/ui/NewsCard';
+import { Section } from '@/components/ui/Section';
 
 export const NewsAndEventsPageClient = () => {
     return (
@@ -15,12 +16,18 @@ export const NewsAndEventsPageClient = () => {
             transition={{ duration: 0.5 }}
         >
             <PageHero
-                title={pageData.hero.title}
-                subtitle={pageData.hero.subtitle}
-                backgroundImage={pageData.hero.backgroundImage}
+                title={heroData.hero.title}
+                subtitle={heroData.hero.subtitle}
+                backgroundImage={heroData.hero.backgroundImage}
             />
 
-            <ComingSoon />
+            <Section className="py-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {newsData.map((newsItem) => (
+                        <NewsCard key={newsItem.id} newsItem={newsItem} />
+                    ))}
+                </div>
+            </Section>
             
         </motion.div>
     );

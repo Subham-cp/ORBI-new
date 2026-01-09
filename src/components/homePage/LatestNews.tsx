@@ -25,7 +25,8 @@ export function LatestNews() {
           Latest News & Updates
         </Title>
         <span className="hidden md:inline-flex">
-          <Button href="/news" variant="secondary" >
+          {/* FIXED LINK HERE: Changed /news to /news-events */}
+          <Button href="/news-events" variant="secondary" >
           <span>View All</span>
           <ArrowRight className="h-4 w-4" />
         </Button>
@@ -39,7 +40,6 @@ export function LatestNews() {
           ))}
         </Carousel>
       ) : (
-        // --- REPLACED THE OLD DIV WITH THE NEW COMPONENT ---
         <NoItemsCard 
           icon={Inbox} 
           title="No News Updates" 
@@ -48,11 +48,12 @@ export function LatestNews() {
       )}
 
       <div className="mt-20 text-center md:hidden">
-        <Button href="/news" variant="secondary" className="inline-flex">
+        {/* FIXED LINK HERE ALSO */}
+        <Button href="/news-events" variant="secondary" className="inline-flex">
           <span>View All</span>
           <ArrowRight className="h-4 w-4" />
         </Button>
       </div>
     </Section>
   );
-}
+}  
