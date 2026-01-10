@@ -5,7 +5,7 @@ import { Inter, Orbitron, Space_Grotesk, Roboto_Condensed } from "next/font/goog
 import { LoadingProvider } from "@/context/LoadingContext";
 import AppContentWrapper from "@/components/AppContentWrapper";
 import type { Metadata } from 'next';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+
 const inter = Inter({ 
   subsets: ["latin"], 
   variable: '--font-inter' 
@@ -97,13 +97,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </body>
     </html>
   );
-  <SpeedInsights />
-
-        <LoadingProvider>
-          <AppContentWrapper>{children}</AppContentWrapper>
-        </LoadingProvider>
-      </body>
-    </html>
-  );
-}
 }
