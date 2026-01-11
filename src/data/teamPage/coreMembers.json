@@ -102,7 +102,7 @@
       "affiliation": "Department of ME, NERIST",
       "image": "/images/teamMembers/coreMembers/DrNitishKumar.jpg",
       "featured": true
-    }
+    },
     {
       "id": 14,
       "name": "Dr. Tori Basar",
@@ -118,7 +118,5 @@
       "affiliation": "Department of HSS, NERIST",
       "image": "/images/teamMembers/coreMembers/Dr_Yuma_Narah.jpg",
       "featured": true
-    },
-
-    
+    }
 ]
