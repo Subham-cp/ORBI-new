@@ -26,8 +26,7 @@
     {
       "id": 4,
       "name": "Prof. Raju Barthakur",
-      "role": "Coordinator, Outreach ",
-      "affiliation": "Editor, 'LiftOff' Newsletter ",
+      "role": "Coordinator, Outreach (Editor, 'LiftOff' Newsletter)",
       "affiliation": "Department of HSS, NERIST",
       "image": "/images/teamMembers/coreMembers/Prof_Raju_Barthakur.jpg",
       "featured": true
@@ -104,4 +103,22 @@
       "image": "/images/teamMembers/coreMembers/DrNitishKumar.jpg",
       "featured": true
     }
+    {
+      "id": 14,
+      "name": "Dr. Tori Basar",
+      "role": "Faculty Coordinator",
+      "affiliation": "Department of CE, NERIST",
+      "image": "/images/teamMembers/coreMembers/Dr_Tori_Basar.jpg",
+      "featured": true
+    },
+     {
+      "id": 15,
+      "name": "Dr. Yuma Narah",
+      "role": "Faculty Coordinator and Assistant Editor, 'Lift Off, the ORBI Newsletter",
+      "affiliation": "Department of HSS, NERIST",
+      "image": "/images/teamMembers/coreMembers/Dr_Yuma_Narah.jpg",
+      "featured": true
+    },
+
+    
 ]
