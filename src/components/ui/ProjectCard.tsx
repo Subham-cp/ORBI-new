@@ -15,10 +15,21 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
+  // Logic: If the JSON has a specific link (not "#"), use it. 
+  // Otherwise, default to a dynamic internal route like "/research/{id}"
+  const projectUrl = project.link && project.link !== '#' 
+    ? project.link 
+    : `/research/${project.id}`;
+
   return (
     <div className="relative h-full w-full overflow-hidden rounded-2xl border border-white/10 p-4 bg-slate-950 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.15),rgba(255,255,255,0))] transition-all duration-300 hover:border-cyan-400/50 flex flex-col group">
       <div className="relative mb-4 h-56 w-full overflow-hidden rounded-lg">
-        <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+        <Image 
+          src={project.image} 
+          alt={project.title} 
+          fill 
+          className="object-cover transition-transform duration-500 group-hover:scale-105" 
+        />
         {/* Fields overlaid at the bottom of the image */}
         <div className="absolute bottom-0 left-0 right-0 flex flex-wrap gap-2 p-2 bg-gradient-to-t from-black/80 to-transparent">
           {project.fields.map((field) => (
@@ -32,7 +43,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         <h3 className="mb-4 text-lg font-bold text-white line-clamp-2 font-heading">{project.title}</h3>
       </div>
       <div className="mt-auto">
-        <Button href={project.link} variant="secondary" className="inline-flex w-full justify-center">
+        <Button href={projectUrl} variant="secondary" className="inline-flex w-full justify-center">
           Read More
         </Button>
       </div>

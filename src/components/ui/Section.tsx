@@ -22,4 +22,20 @@ export const Section = ({ children, className = '', ...rest }: SectionProps) => 
       </div>
     </motion.section>
   );
+  
 };
+{
+  "id": "5",
+  "title": "Stratospheric High-Altitude Balloon Payload (HAB-X)",
+  "image": "/images/rocket.jpg", 
+  "link": "#",
+  "fields": ["Aerospace", "Telemetry", "Atmospheric Science"],
+  "description": "Development of a modular, reusable payload system designed for high-altitude balloon missions reaching the stratosphere (approx. 30km altitude). The payload integrates multi-sensor arrays to measure vertical atmospheric profiles including pressure, temperature, humidity, and UV radiation. Key features include a redundant GPS tracking system, long-range LoRaWAN telemetry for real-time ground communication, and a stabilized horizon-capture imaging system.",
+  "status": "Upcoming",
+  "startDate": "2024-04-15",
+  "endDate": "2025-06-30",
+  "teamMembers": [
+    { "name": "Team Lead Name", "profileLink": "#" },
+    { "name": "Dr. Project Mentor", "profileLink": "#" }
+  ]
+}
