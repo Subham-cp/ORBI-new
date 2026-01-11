@@ -65,7 +65,7 @@ const MemberCard = ({ name, role, affiliation, image }: { name: string; role: st
                             alt={name} 
                             fill 
                             className="object-cover"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            sizes="(max-width: 768px) 100vw, 200px"
                         />
                         ) : (
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-slate-600" viewBox="0 0 20 20" fill="currentColor">

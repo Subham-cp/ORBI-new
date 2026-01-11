@@ -50,7 +50,13 @@ export const CoreTeam = ({ members }: { members: TeamMember[] }) => {
             <div className="flex items-center gap-4">
               <div className="relative h-20 w-20 flex-shrink-0">
                 {member.image ? (
-                  <Image src={member.image} alt={member.name} fill className="rounded-full object-cover" />
+                 <Image 
+  src={member.image} 
+  alt={member.name} 
+  fill 
+  className="rounded-full object-cover" 
+  sizes="100px" // Since it's always a small icon, just request a small size (~100px to be safe for retina screens)
+/>
                 ) : (
                   <div className="flex h-full w-full items-center justify-center rounded-full bg-gradient-to-br from-slate-700 to-slate-800">
                     <span className="text-2xl font-bold text-cyan-400">{getInitials(member.name)}</span>

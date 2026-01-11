@@ -31,12 +31,13 @@ export const TeamCard = ({ member }: TeamCardProps) => {
         {/* --- CONDITIONAL RENDERING LOGIC --- */}
         {member.image ? (
           // If an image exists, display it
-          <Image
-            src={member.image}
-            alt={member.name}
-            fill
-            className="rounded-full object-cover"
-          />
+         <Image
+  src={member.image}
+  alt={member.name}
+  fill
+  className="rounded-full object-cover"
+  sizes="(max-width: 768px) 100vw, 200px" // Tells Next.js: "I only need this image to be roughly 200px wide"
+/>
         ) : (
           // If no image, display the initials fallback
           <div className="flex h-full w-full items-center justify-center rounded-full bg-gradient-to-br from-slate-700 to-slate-800 font-heading">
