@@ -19,7 +19,7 @@
       "image": "/images/teamMembers/students/bhaskar_Newpany.jpg"
     },
     "webmaster_admin": {
-      "name": "Shubham Paul",
+      "name": "Subham Paul",
       "role": "Webmaster / Admin",
       "affiliation": "Dept. of Computer Science Eng.",
       "image": "/images/teamMembers/students/subham_paul.jpg"
@@ -137,4 +137,5 @@
       }
     ]
   }
+
 }
