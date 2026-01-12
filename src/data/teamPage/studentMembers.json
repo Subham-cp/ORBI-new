@@ -136,27 +136,5 @@
         "image": "/images/teamMembers/students/Sneha_Sharma.jpg"
       }
     ]
-  },
-  "volunteer_wing": {
-    "chief_volunteers": [
-      {
-        "name": "Pritam Deb",
-        "role": "Chief Volunteer",
-        "affiliation": "Dept. of Electronics & Comm. Eng.",
-        "image": "/images/teamMembers/students/Pritam_deb.jpg"
-      },
-      {
-        "name": "Aneek Debnath",
-        "role": "Chief Volunteer",
-        "affiliation": "Dept. of Electronics & Comm. Eng.",
-        "image": "/images/teamMembers/students/Aneek_debnath.jpg"
-      },
-      {
-        "name": "Anuj Das",
-        "role": "Chief Volunteer",
-        "affiliation": "Dept. of Mechanical Eng.",
-        "image": "/images/teamMembers/students/anuj_das.jpg"
-      }
-    ]
   }
 }
