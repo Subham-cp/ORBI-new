@@ -57,7 +57,7 @@
     {
       "id": "5",
       "title": "High-Altitude Balloon (HAB) Technology Demonstrator",
-      "image": "public/images/researchImage/HAB.jpg",
+      "image": "/images/researchImage/HAB.jpg",
       "link": "#",
       "fields": ["Robotics", "AI", "aerospace"],
       "description": "Project Stratos-1 is a student-led aerospace mission to design, launch, and recover a payload from the Stratosphere (approx. 30km altitude). The mission serves as a \"Phase 1\" technology demonstrator to validate the club’s capabilities in telemetry, long-range communication, and thermal engineering before progressing to orbital CubeSat missions.\n\nPrimary Goal: Capture 4K video of the Earth's curvature and safely recover the payload using custom tracking systems.",
