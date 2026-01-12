@@ -1,14 +1,14 @@
 "use client";
 
-
 import { motion, Variants } from 'framer-motion';
 import { Section } from '@/components/ui/Section';
 import { SectionTitle } from '@/components/ui/SectionTitle';
-
+import { TeamCard } from '@/components/ui/TeamCard';
+import coreMembers from '@/data/teamPage/coreMembers.json';
 
 export const AboutOrganizersSection = () => {
   // Animation variants for the grid container to stagger its children
-    const containerVariants: Variants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -18,7 +18,10 @@ export const AboutOrganizersSection = () => {
     },
   };
 
-
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
 
   return (
     <Section>
@@ -31,6 +34,11 @@ export const AboutOrganizersSection = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
+        {coreMembers.map((member) => (
+          <motion.div key={member.id} variants={itemVariants}>
+            <TeamCard member={member} />
+          </motion.div>
+        ))}
       </motion.div>
     </Section>
   );

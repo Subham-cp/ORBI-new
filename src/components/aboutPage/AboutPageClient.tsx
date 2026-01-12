@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion';
 import aboutData from '@/data/aboutPage/aboutPage.json';
 import { PageHero } from '@/components/ui/PageHero';
-import { ComingSoon } from '../ui/ComingSoon';
-
+import { AboutOrganizersSection } from './AboutOrganizerSection';
+import { MissionSection } from '@/components/homePage/MissionSection';
+import { VisionSection } from '@/components/homePage/VisionSection';
 
 export const AboutPageClient = () => {
     return (
@@ -20,7 +21,11 @@ export const AboutPageClient = () => {
                 backgroundImage={aboutData.hero.backgroundImage}
             />
             
-            <ComingSoon />
+            {/* Reusing Mission and Vision sections to populate the About page */}
+            <MissionSection />
+            <VisionSection />
+            
+            <AboutOrganizersSection />
 
         </motion.div>
     );
