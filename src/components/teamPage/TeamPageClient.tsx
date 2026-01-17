@@ -33,9 +33,6 @@ export interface StudentData {
   event_wing: {
     coordinators: Student[];
   };
-  volunteer_wing: {
-    chief_volunteers: Student[];
-  };
 }
 
 interface TeamPageClientProps {

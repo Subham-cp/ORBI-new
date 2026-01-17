@@ -166,17 +166,6 @@ export function StudentMembers({ data }: StudentMembersProps) {
             {data.event_wing.coordinators.map((m, i) => <MemberCard key={i} {...m} />)}
           </div>
         </div>
-
-        {/* 6. Volunteers */}
-        <SectionTitle title="Volunteer Wing?" />
-        <div>
-          <SubSectionTitle title="Chief Volunteers" />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-            {data.volunteer_wing.chief_volunteers.map((m, i) => <MemberCard key={i} {...m} />)}
-          </div>
-        </div>
-      </div>
-
     </div>
   );
 }
