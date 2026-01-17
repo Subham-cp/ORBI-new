@@ -168,7 +168,7 @@ export function StudentMembers({ data }: StudentMembersProps) {
         </div>
 
         {/* 6. Volunteers */}
-        <SectionTitle title="Volunteer Wing" />
+        <SectionTitle title="Volunteer Wing?" />
         <div>
           <SubSectionTitle title="Chief Volunteers" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
