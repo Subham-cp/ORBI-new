@@ -60,13 +60,14 @@ const MemberCard = ({ name, role, affiliation, image }: { name: string; role: st
                 <div className="absolute inset-1.5 rounded-full bg-gradient-to-tr from-blue-500 via-purple-500 to-blue-500 p-[3px] shadow-lg shadow-blue-500/30">
                     <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center overflow-hidden relative">
                         {image ? (
-                        <Image 
-                            src={image} 
-                            alt={name} 
-                            fill 
-                            className="object-cover"
-                            sizes="(max-width: 768px) 100vw, 200px"
-                        />
+                       <Image 
+  src={image} 
+  alt={name} 
+  fill 
+  // Change: added 'object-top'
+  className="object-cover object-top"
+  sizes="(max-width: 768px) 100vw, 200px"
+/>
                         ) : (
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-slate-600" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />

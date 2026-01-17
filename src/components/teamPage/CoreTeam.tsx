@@ -54,8 +54,9 @@ export const CoreTeam = ({ members }: { members: TeamMember[] }) => {
   src={member.image} 
   alt={member.name} 
   fill 
-  className="rounded-full object-cover" 
-  sizes="100px" // Since it's always a small icon, just request a small size (~100px to be safe for retina screens)
+  // Change: added 'object-top'
+  className="rounded-full object-cover object-top" 
+  sizes="100px" 
 />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center rounded-full bg-gradient-to-br from-slate-700 to-slate-800">
