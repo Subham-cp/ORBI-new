@@ -166,6 +166,8 @@ export function StudentMembers({ data }: StudentMembersProps) {
             {data.event_wing.coordinators.map((m, i) => <MemberCard key={i} {...m} />)}
           </div>
         </div>
+      </div>
+
     </div>
   );
 }
