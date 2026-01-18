@@ -21,154 +21,117 @@ const SubSectionTitle = ({ title }: { title: string }) => (
   </h4>
 );
 
-// --- UPDATED CARD DESIGN (Clear Photo, Sharp Lines) ---
+// --- NEW CARD DESIGN (Core Team Style, but "Little Big") ---
 const MemberCard = ({ name, role, affiliation, image }: { name: string; role: string; affiliation: string; image?: string }) => (
-  /* Container */
-  <div className="group [perspective:1000px] h-[350px] w-full max-w-sm mx-auto">
+  /* Container - Matches CoreTeam/TeamCard visual style (Slate-950, White/10 border, Radial Gradient) */
+  <div className="group relative h-full w-full max-w-sm mx-auto overflow-hidden rounded-2xl border border-white/10 bg-slate-950 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.15),rgba(255,255,255,0))] p-8 text-center shadow-2xl backdrop-blur-md transition-all duration-300 hover:border-cyan-400/50 hover:-translate-y-1">
     
-    <div className="relative w-full h-full duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(12deg)_rotateX(5deg)] transition-all ease-out">
+    {/* Image Container - 'Little Big' (Increased from w-32 to w-40) */}
+    <div className="relative mx-auto h-40 w-40 mb-6 rounded-full border-4 border-white/5 shadow-xl group-hover:border-cyan-400/30 transition-all duration-500">
+       {image ? (
+         <Image 
+            src={image} 
+            alt={name} 
+            fill 
+            className="rounded-full object-cover object-top"
+            sizes="(max-width: 768px) 100vw, 200px"
+          />
+       ) : (
+          <div className="flex h-full w-full items-center justify-center rounded-full bg-slate-800 text-slate-500">
+             <span className="text-4xl">?</span>
+          </div>
+       )}
+    </div>
+
+    {/* Text Content */}
+    <div className="relative z-10">
+      <h3 className="text-xl font-bold text-white font-heading tracking-wide mb-2 group-hover:text-cyan-300 transition-colors">{name}</h3>
       
-      {/* --- Card Body --- */}
-      <div className="absolute inset-0 w-full h-full bg-slate-950 rounded-xl border border-blue-500/40 shadow-[0_0_30px_-10px_rgba(59,130,246,0.5)] overflow-hidden [backface-visibility:hidden]">
-        
-        {/* 1. Background Effects (Moved BEHIND content) */}
-        {/* Scanlines - Now with lower z-index so they don't cover the face */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_50%,rgba(0,0,0,0.6)_50%)] bg-[length:100%_4px] pointer-events-none opacity-20 z-0"></div>
-        
-        {/* Digital Grid - Brighter opacity for visibility */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.15)_1px,transparent_1px),linear-gradient(to_right,rgba(59,130,246,0.15)_1px,transparent_1px)] bg-[size:24px_24px] opacity-30 z-0"></div>
-        
-        {/* Glowing Bars */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-80 z-10"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-80 z-10"></div>
-        
-        {/* 2. Corner Accents - Made thicker/brighter */}
-        <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-blue-400 rounded-tl-md z-20"></div>
-        <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-blue-400 rounded-tr-md z-20"></div>
-        <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-purple-400 rounded-bl-md z-20"></div>
-        <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-purple-400 rounded-br-md z-20"></div>
-
-        {/* 3. Content Container (Z-index 30 ensures it sits ABOVE scanlines) */}
-        <div className="relative z-30 flex flex-col items-center h-full p-6">
-            
-            {/* Photo Container */}
-            <div className="relative w-32 h-32 mb-5 group-hover:scale-105 transition-transform duration-500">
-                {/* Spinning outer ring - Brighter */}
-                <div className="absolute inset-0 rounded-full border-[3px] border-dashed border-blue-400/80 animate-[spin_10s_linear_infinite] opacity-80"></div>
-                
-                {/* Inner glowing border */}
-                <div className="absolute inset-1.5 rounded-full bg-gradient-to-tr from-blue-500 via-purple-500 to-blue-500 p-[3px] shadow-lg shadow-blue-500/30">
-                    <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center overflow-hidden relative">
-                        {image ? (
-                       <Image 
-  src={image} 
-  alt={name} 
-  fill 
-  // Change: added 'object-top'
-  className="object-cover object-top"
-  sizes="(max-width: 768px) 100vw, 200px"
-/>
-                        ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-slate-600" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                        </svg>
-                        )}
-                    </div>
-                </div>
-            </div>
-
-            {/* Text Content */}
-            <h5 className="font-bold text-xl text-white mb-2 leading-tight text-center tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">{name}</h5>
-            
-            <div className="mb-4 px-4 py-1.5 rounded-full bg-blue-950/80 border border-blue-400/30 backdrop-blur-sm">
-                <p className="text-blue-200 text-xs font-bold tracking-[0.15em] uppercase">{role}</p>
-            </div>
-            
-            <div className="mt-auto w-full border-t border-blue-500/30 pt-3 text-center">
-                <p className="text-slate-300 text-xs font-mono leading-snug line-clamp-2">{affiliation}</p>
-            </div>
-        </div>
-
+      <div className="inline-block px-3 py-1 rounded-full bg-blue-950/30 border border-blue-500/20 mb-3">
+        <p className="text-cyan-400 text-sm font-medium tracking-wider uppercase">{role}</p>
       </div>
+      
+      <p className="text-slate-400 text-sm font-light leading-relaxed">{affiliation}</p>
     </div>
   </div>
 );
 
 export function StudentMembers({ data }: StudentMembersProps) {
+  
+  // Merge PR & Digital Media + Info Pub members
+  const mergedPRMembers = [
+    ...data.pr_media_wing.pr_digital_media,
+    ...data.pr_media_wing.info_pub
+  ];
+
   return (
     <div className="py-20 relative overflow-hidden">
-      {/* Page Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-950 to-slate-950 pointer-events-none"></div>
+      {/* Background - Simplified to match Core Team sections */}
+      <div className="absolute inset-0 bg-slate-950 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(to_right,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none opacity-50"></div>
       
-      {/* Background Grid - Increased visibility */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.07)_1px,transparent_1px),linear-gradient(to_right,rgba(59,130,246,0.07)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none opacity-100"></div>
+      {/* Glow Effect */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-blue-900/10 blur-[120px] rounded-full pointer-events-none"></div>
 
+      {/* Main Page Title */}
       <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-20 relative z-10">
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-200 to-purple-400 inline-block pb-2 relative">
-          Student Team Structure
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 h-1.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full blur-sm"></div>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-white to-purple-400 inline-block pb-4">
+          Student Team
         </span>
       </h2>
 
-      <div className="max-w-6xl mx-auto relative z-10 px-4">
-        {/* 1. Leadership */}
-        <SectionTitle title="Executive Leadership" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 justify-items-center">
-          <MemberCard {...data.president} />
-          <MemberCard {...data.vice_president} />
+      <div className="max-w-7xl mx-auto relative z-10 px-4 space-y-20">
+        
+        {/* 1. Executive Leadership */}
+        <div>
+           <SectionTitle title="Executive Leadership" />
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center max-w-3xl mx-auto">
+             <MemberCard {...data.president} />
+             <MemberCard {...data.vice_president} />
+           </div>
         </div>
 
-        {/* 2. Administration */}
-        <SectionTitle title="Core Administration" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 justify-items-center">
-          <MemberCard {...data.administration.treasurer} />
-          <MemberCard {...data.administration.webmaster_admin} />
+        {/* 2. Core Administration */}
+        <div>
+           <SectionTitle title="Core Administration" />
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center max-w-3xl mx-auto">
+             <MemberCard {...data.administration.treasurer} />
+             <MemberCard {...data.administration.webmaster_admin} />
+           </div>
         </div>
 
-        {/* 3. Project Wing */}
-        <SectionTitle title="Project Wing" />
-        <div className="space-y-16">
-          <div>
-            <SubSectionTitle title="Project Heads" />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-              {data.project_wing.heads.map((m, i) => <MemberCard key={i} {...m} />)}
-            </div>
+        {/* 3. Project Wing (Kept distinct Heads vs Leads logic, but same card style) */}
+        <div>
+          <SectionTitle title="Project Wing" />
+          
+          <SubSectionTitle title="Project Heads" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+             {data.project_wing.heads.map((m, i) => <MemberCard key={i} {...m} />)}
           </div>
-          <div>
-            <SubSectionTitle title="Project Leads" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-              {data.project_wing.leads.map((m, i) => <MemberCard key={i} {...m} />)}
-            </div>
+
+          <SubSectionTitle title="Project Leads" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+             {data.project_wing.leads.map((m, i) => <MemberCard key={i} {...m} />)}
           </div>
         </div>
 
-        {/* 4. PR Wing */}
-        <SectionTitle title="Public Relations & Media Wing" />
-        <div className="space-y-16">
-          <div>
-            <SubSectionTitle title="PR & Digital Media Incharges" />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-              {data.pr_media_wing.pr_digital_media.map((m, i) => <MemberCard key={i} {...m} />)}
-            </div>
-          </div>
-          <div>
-            <SubSectionTitle title="Information & Publicity" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-              {data.pr_media_wing.info_pub.map((m, i) => <MemberCard key={i} {...m} />)}
-            </div>
+        {/* 4. Public Relations & Media Wing (MERGED) */}
+        <div>
+          <SectionTitle title="Public Relations & Media Wing" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+             {mergedPRMembers.map((m, i) => <MemberCard key={i} {...m} />)}
           </div>
         </div>
 
         {/* 5. Event Wing */}
-        <div className="mt-12">
+        <div>
           <SectionTitle title="Event Management Wing" />
-          <SubSectionTitle title="Event Co-ordinators" />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
             {data.event_wing.coordinators.map((m, i) => <MemberCard key={i} {...m} />)}
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   );
 }
